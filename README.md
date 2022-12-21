@@ -15,7 +15,7 @@ string path = Directory.GetCurrentDirectory();
 var _dataPliku = new DateTime();
 try
 {
-  var _r = db.t]Tabela.FirstOrDefault();
+  var _r = db.Tabela.FirstOrDefault();
   _dataPliku = _r.DATA_PLIKU;
 }
 catch
@@ -28,7 +28,7 @@ catch
 var _nazwaPliku = "test.xlsx";
 var _dataPliku = new DateTime();
 FileInfo _file = new FileInfo(_nazwaPliku);
-_dataPliku = _file.LAstWriteTime;
+_dataPliku = _file.LastWriteTime;
 ```
 
 
