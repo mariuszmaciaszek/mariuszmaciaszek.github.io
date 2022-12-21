@@ -5,10 +5,12 @@
 20221221
 c#
 
+```
 //odczyt aktualnego katalogu
 string path = Directory.GetCurrentDirectory();
+```
 
-
+```
 //Odczyt daty pliku z tabeli.
 var _dataPliku = new DateTime();
 try
@@ -19,27 +21,33 @@ try
 catch
 {
 }
+```
 
-
+```
 //Odczyt daty pliku
 var _nazwaPliku = "test.xlsx";
 var _dataPliku = new DateTime();
 FileInfo _file = new FileInfo(_nazwaPliku);
 _dataPliku = _file.LAstWriteTime;
+```
 
 
+```
 //Porównywanie dat.
 if( _dataPliku.CompareTo(_dataPliku) == 0 )
 {
   //daty są takie same
 }
+```
 
 
+```
 //Usunięcie wszystkich wierszy z tabeli
 db.Tabela.RemoveRange(db.Tabela);
 db.SaveChanges();
+```
 
-
+```
 //Import danych z excela do tabeli
 var _nazwaPliku = "test.xlsx";
 var _wb = new XLWorkbook(_nazwaPliku);
@@ -61,6 +69,6 @@ foreach(var row in table.DataRange.Rows())
   db.Tabela.Add(_TAbela);
   db.SaveChanges();
 }
-
+```
 
 
