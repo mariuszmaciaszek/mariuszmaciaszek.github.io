@@ -14,7 +14,7 @@ string path = Directory.GetCurrentDirectory();
 //Odczyt daty pliku z tabeli.
 var _dataPliku = new DateTime();
 try
-{
+{ 
   var _r = db.Tabela.FirstOrDefault();
   _dataPliku = _r.DATA_PLIKU;
 }
